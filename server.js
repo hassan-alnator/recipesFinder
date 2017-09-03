@@ -23,4 +23,6 @@ app.post("/recipes", function (req, res) {
 
 app.use(webpackMiddleware(webpack(webpackConfig)));
 
-app.listen(process.env.PORT || 3000, () => console.log('Listening'));
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => console.log(`Listening on http://localhost:${port}`));
